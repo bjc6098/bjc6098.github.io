@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="제라온 게임스튜디오 공식 웹사이트. 몬스터를 소환하고 성장시키며 던전하트를 지키는 모바일 디펜스 게임, 던전을 지켜라를 소개합니다.">
+  <meta name="theme-color" content="#101914">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="제라온 게임스튜디오">
+  <meta property="og:description" content="모바일 게임을 만드는 제라온 게임스튜디오. 픽셀 속 모험을 만나보세요.">
+  <title>제라온 게임스튜디오 · ZERAON GAME STUDIO</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23101914'/%3E%3Cpath d='M10 11h20v5L17 25h13v5H10v-5l13-9H10z' fill='%23eac27d'/%3E%3C/svg%3E">
+  <style>
+    :root { color-scheme: dark; --bg: #101914; --paper: #f4f0e5; --muted: #b6bdb0; --gold: #eac27d; --line: #354337; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+    body { margin: 0; background: var(--bg); color: var(--paper); font-family: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.7; word-break: keep-all; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
+    ::selection { background: var(--gold); color: var(--bg); }
+    .wrap { width: min(1120px, calc(100% - 80px)); margin-inline: auto; }
+    .skip { position: absolute; left: 20px; top: -80px; padding: 12px 18px; background: var(--paper); color: var(--bg); z-index: 10; }
+    .skip:focus { top: 12px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 31px; border-bottom: 1px solid var(--line); }
+    .brand { display: inline-flex; align-items: center; gap: 13px; }
+    .brand-mark { width: 34px; height: 34px; color: var(--gold); }
+    .brand-name { font-size: 14px; font-weight: 700; letter-spacing: .12em; line-height: 1.35; }
+    .brand-name small { display: block; color: var(--muted); font-size: 9px; letter-spacing: .22em; margin-top: 4px; }
+    nav { display: flex; gap: 30px; font-size: 13px; color: var(--muted); }
+    nav a:hover, footer a:hover { color: var(--gold); }
+    .hero { display: grid; grid-template-columns: 1.08fr 1fr; align-items: center; gap: 64px; padding-block: 88px 78px; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--gold); font-size: 10px; letter-spacing: .2em; font-weight: 700; }
+    .pixel { width: 7px; height: 7px; background: var(--gold); box-shadow: 4px -4px 0 #eac27d35; }
+    h1 { margin: 24px 0; font-size: clamp(42px, 4.7vw, 62px); line-height: 1.25; letter-spacing: -.055em; font-weight: 750; }
+    h1 span { display: block; }
+    .intro { margin: 0; font-size: 16px; color: var(--muted); line-height: 1.9; }
+    .button { display: inline-flex; align-items: center; justify-content: space-between; gap: 34px; min-height: 48px; padding: 11px 19px; background: var(--gold); color: var(--bg); font-size: 13px; font-weight: 700; margin-top: 34px; border: 1px solid var(--gold); transition: background .18s, transform .18s; }
+    .button:hover { background: #f4d69e; transform: translateY(-2px); }
+    .button svg { width: 16px; height: 16px; }
+    .hero-note { color: #9aa793; font-size: 10px; letter-spacing: .12em; margin-top: 34px; }
+    .scene { position: relative; aspect-ratio: 1.03; background: #17231b; border: 1px solid #465342; padding: 9px; }
+    .scene::before, .scene::after { content: ""; position: absolute; width: 10px; height: 10px; border: 1px solid var(--gold); z-index: 1; }
+    .scene::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+    .scene::after { right: -1px; bottom: -1px; border-left: 0; border-top: 0; }
+    .scene-art { display: block; width: 100%; height: 100%; background: #142019; }
+    .scene-label { position: absolute; inset: auto 28px 26px; display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; }
+    .scene-label small { display: block; font-size: 9px; color: var(--gold); letter-spacing: .18em; margin-bottom: 4px; }
+    .scene-label strong { font-size: 20px; letter-spacing: -.03em; }
+    .scene-label .serial { font: 11px/1.6 ui-monospace, monospace; color: #a5b39b; letter-spacing: .12em; }
+    .game { border-top: 1px solid var(--line); padding-block: 42px 52px; display: grid; grid-template-columns: .68fr 1.32fr; gap: 68px; }
+    .section-number { color: var(--gold); font: 11px/1.6 ui-monospace, monospace; letter-spacing: .12em; }
+    h2 { margin: 12px 0 10px; font-size: 28px; letter-spacing: -.045em; line-height: 1.4; }
+    .section-caption { margin: 0; color: var(--muted); font-size: 12px; }
+    .game-body { padding-top: 6px; }
+    .game-body > p { margin: 0; max-width: 580px; font-size: 17px; line-height: 1.95; letter-spacing: -.02em; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 24px 0 0; list-style: none; }
+    .tags li { color: #c9d1c1; font-size: 11px; border: 1px solid #3d4c3c; padding: 4px 10px; }
+    .about { border-top: 1px solid var(--line); padding-block: 38px 44px; display: grid; grid-template-columns: .68fr 1.32fr; gap: 68px; }
+    .about h2 { font-size: 22px; margin-top: 0; }
+    .about p { margin: 0; color: var(--muted); font-size: 14px; max-width: 570px; line-height: 1.9; }
+    footer { border-top: 1px solid var(--line); padding-block: 24px 30px; display: flex; justify-content: space-between; align-items: center; gap: 18px; color: #9eaa97; font-size: 10px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    @media (min-width: 1440px) { .hero { padding-block: 108px 98px; } }
+    @media (max-width: 800px) {
+      .wrap { width: calc(100% - 48px); }
+      .hero { gap: 32px; padding-block: 60px; }
+      h1 { font-size: 43px; }
+      .intro { font-size: 14px; }
+      .game, .about { gap: 32px; }
+      .scene-label { inset: auto 21px 20px; }
+      .scene-label strong { font-size: 17px; }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: calc(100% - 40px); }
+      header { padding-block: 22px; gap: 12px; }
+      .brand { gap: 9px; }
+      .brand-mark { width: 29px; height: 29px; }
+      .brand-name { font-size: 12px; }
+      .brand-name small { font-size: 8px; }
+      nav { gap: 16px; font-size: 11px; }
+      .hero { grid-template-columns: 1fr; gap: 40px; padding-block: 48px 42px; }
+      h1 { font-size: clamp(38px, 10.5vw, 53px); margin-block: 20px; }
+      .intro { font-size: 15px; }
+      .hero-note { margin-top: 24px; }
+      .button { margin-top: 26px; }
+      .scene { max-width: 440px; width: 100%; margin-inline: auto; }
+      .scene-label { inset: auto 25px 25px; }
+      .scene-label strong { font-size: 21px; }
+      .game, .about { grid-template-columns: 1fr; gap: 22px; padding-block: 32px; }
+      .game-body > p { font-size: 15px; }
+      .about h2 { margin-bottom: 0; }
+      footer { align-items: flex-start; flex-direction: column; gap: 12px; font-size: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } .button:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 바로가기</a>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#main" aria-label="제라온 게임스튜디오 홈">
+        <svg class="brand-mark" viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M1 1h32v32H1z" stroke="currentColor" opacity=".55"/><path d="M8 9h18v4L14 22h12v4H8v-4l12-9H8z" fill="currentColor"/></svg>
+        <span class="brand-name">ZERAON<small>GAME STUDIO</small></span>
+      </a>
+      <nav aria-label="주요 메뉴"><a href="#game">게임 소개</a><a href="#about">스튜디오</a></nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="studio-title">
+        <div>
+          <div class="eyebrow"><span class="pixel" aria-hidden="true"></span>PLAY A LITTLE. ADVENTURE A LOT.</div>
+          <h1 id="studio-title"><span>제라온</span><span>게임스튜디오</span></h1>
+          <p class="intro">픽셀 속에서 시작되는 모험.<br>몰입할 수 있는 모바일 게임을 만듭니다.</p>
+          <a class="button" href="#game">우리의 게임 살펴보기<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.5"/></svg></a>
+          <p class="hero-note">ZERAON GAME STUDIO · MOBILE GAMES</p>
+        </div>
+        <div class="scene" aria-hidden="true">
+          <svg class="scene-art" viewBox="0 0 460 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="light"><stop stop-color="#536746" stop-opacity=".8"/><stop offset="1" stop-color="#142019" stop-opacity="0"/></radialGradient>
+              <linearGradient id="heart" x1="182" y1="167" x2="278" y2="270" gradientUnits="userSpaceOnUse"><stop stop-color="#ffcf98"/><stop offset=".34" stop-color="#ee795f"/><stop offset="1" stop-color="#8e3541"/></linearGradient>
+              <linearGradient id="fade" x1="230" y1="325" x2="230" y2="450" gradientUnits="userSpaceOnUse"><stop stop-color="#142019" stop-opacity="0"/><stop offset="1" stop-color="#142019"/></linearGradient>
+              <pattern id="bricks" width="72" height="40" patternUnits="userSpaceOnUse"><path d="M0 0h72v40H0zM36 0v20M0 20h72M0 20v20M72 20v20" stroke="#4d5e43" stroke-opacity=".35"/></pattern>
+              <pattern id="floor" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="matrix(1 .5 -1 .5 230 260)"><rect width="40" height="40" stroke="#5b7050" stroke-opacity=".4"/></pattern>
+            </defs>
+            <rect width="460" height="450" fill="#142019"/>
+            <rect x="30" y="30" width="400" height="250" fill="url(#bricks)"/>
+            <ellipse cx="230" cy="222" rx="200" ry="190" fill="url(#light)"/>
+            <path d="M132 278V132h17v-24h23V87h116v21h23v24h17v146" stroke="#5b6c4a" stroke-width="16"/>
+            <path d="M151 277V139h17v-24h124v24h17v138" stroke="#253725" stroke-width="8"/>
+            <path d="M174 276V142h112v134" fill="#111b15"/>
+            <path d="M193 143v35m25-35v35m25-35v35m25-35v35" stroke="#394a30" stroke-width="7"/>
+            <path d="M0 273h460v177H0z" fill="url(#floor)"/>
+            <path d="m153 307 77-39 77 39-77 39-77-39Z" fill="#253926" stroke="#63744e"/>
+            <path d="m153 307 77 39 77-39v15l-77 40-77-40v-15Z" fill="#1e2c21" stroke="#4a5e3f"/>
+            <path d="m175 294 55-28 55 28-55 28-55-28Z" fill="#526047"/>
+            <path d="m175 294 55 28 55-28v13l-55 28-55-28v-13Z" fill="#344731"/>
+            <ellipse cx="230" cy="280" rx="68" ry="33" fill="#e4b57a" fill-opacity=".06"/>
+            <path d="m230 197-21-21h-26l-17 18v35l64 59 64-59v-35l-17-18h-26l-21 21Z" fill="url(#heart)" stroke="#eeb99a" stroke-width="2"/>
+            <path d="m166 194 43 3 21 91-47-59-17-35Z" fill="#c35a55"/>
+            <path d="m209 176 21 21-21 0-26-21h26Z" fill="#ffd8a5"/>
+            <path d="m230 197 21-21h26l-26 38-21 74V197Z" fill="#f49a73" fill-opacity=".65"/>
+            <path d="m294 194-43 20-21 74 47-59 17-35Z" fill="#9e414a"/>
+            <path d="m183 183-9 11v16" stroke="#ffe4b9" stroke-width="3"/>
+            <path d="M88 196h18v36H88zM354 196h18v36h-18z" fill="#263526" stroke="#62704b"/>
+            <path d="M91 193v-18l6-11 7 15v14H91ZM357 193v-18l6-11 7 15v14h-13Z" fill="#eac27d"/>
+            <path d="M94 190v-10l3-6 4 9v7h-7ZM360 190v-10l3-6 4 9v7h-7Z" fill="#fff1c0"/>
+            <rect x="76" y="44" width="4" height="4" fill="#b6b789"/><rect x="352" y="93" width="3" height="3" fill="#eac27d"/><rect x="326" y="251" width="4" height="4" fill="#b6b789"/><rect x="110" y="286" width="3" height="3" fill="#eac27d"/>
+            <path d="M53 50h12m-6-6v12M385 249h10m-5-5v10" stroke="#eac27d" stroke-opacity=".5"/>
+            <rect width="460" height="450" fill="url(#fade)"/>
+          </svg>
+          <div class="scene-label"><div><small>OUR GAME</small><strong>던전을 지켜라</strong></div><span class="serial">PIXEL<br>DEFENSE</span></div>
+        </div>
+      </section>
+      <section class="game" id="game" aria-labelledby="game-title">
+        <div><span class="section-number">01 / OUR GAME</span><h2 id="game-title">던전을 지켜라</h2><p class="section-caption">몬스터와 함께 지켜내는 던전.</p></div>
+        <div class="game-body"><p>몬스터를 소환하고 성장시키며<br>던전하트를 지키는 모바일 디펜스 게임입니다.<br>나만의 몬스터와 함께 던전을 지켜보세요.</p><ul class="tags" aria-label="게임 특징"><li>모바일</li><li>픽셀 아트</li><li>몬스터 소환</li><li>디펜스</li></ul></div>
+      </section>
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div><h2 id="about-title">게임에 담는 즐거움.</h2><span class="section-number">02 / OUR STUDIO</span></div>
+        <p>제라온 게임스튜디오는 한 번 더 플레이하고 싶은 경험을 목표로 모바일 게임을 만듭니다. 게임의 재미에 집중하며, 플레이 속에 작은 모험을 담아갑니다.</p>
+      </section>
+    </main>
+    <footer><span>© 2026 제라온 게임스튜디오 · ZERAON GAME STUDIO</span><div class="footer-links"><a href="https://github.com/bjc6098" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://bjc6098.github.io/app-ads.txt">광고 판매자 정보</a></div></footer>
+  </div>
+</body>
+</html>
