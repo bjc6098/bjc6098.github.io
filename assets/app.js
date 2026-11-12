@@ -55,7 +55,7 @@
           restoreDraft(game);
           document.getElementById('support-game-title').textContent=game.title;
           document.getElementById('support-description').textContent=game.support_description;
-          document.getElementById('faq-game-description').textContent=game.title+'를 이용하며 자주 궁금해하시는 내용을 모았어요.';
+          document.getElementById('faq-game-description').textContent=game.title+' 이용 중 자주 묻는 질문을 모았어요.';
           document.querySelector('.faq-mascot').hidden=id!=='slime';
           document.getElementById('purchase-note').hidden=!game.topics.some(isPurchase);
           const details=game.faq.map(item=>{
@@ -142,6 +142,7 @@
       const dialog=document.getElementById('screen-dialog');
       const image=document.getElementById('dialog-image');
       for(const button of document.querySelectorAll('.screen-open'))button.addEventListener('click',()=>{
+        dialog.classList.toggle('boom-screen-dialog',button.closest('#game-panel-boom')!==null);
         const source=button.querySelector('img');image.src=source.src;image.alt=source.alt;document.getElementById('dialog-title').textContent=button.dataset.title;dialog.showModal();
       });
       dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
