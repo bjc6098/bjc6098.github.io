@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="뻥! (BOOM!)의 개인정보 처리방침입니다. 기기 내 저장, 공개 예정인 랭킹 정보, 광고와 결제, 개인정보 문의를 안내합니다.">
+  <meta name="description" content="뻥! (BOOM!)의 개인정보 처리방침입니다. 기기 내 저장, 온라인 랭킹 공개 항목과 삭제 방법, 광고와 결제, 개인정보 문의를 안내합니다.">
   <meta name="theme-color" content="#243951">
   <link rel="canonical" href="https://bjc6098.github.io/boom-privacy.html">
   <link rel="icon" href="assets/brand/tiger.png">
@@ -73,10 +73,11 @@
       <h1>뻥! 개인정보 처리방침 <span lang="en">BOOM! Privacy Policy</span></h1>
       <p class="updated">시행일 / Effective date <time datetime="2026-11-12">2026-11-12</time></p>
     </div>
-    <p class="notice">게임 진행과 거리 기록은 기기에 저장됩니다. 온라인 랭킹은 준비 중이며, 출시 후 등록한 닉네임, 거리 기록, 레벨, 국적은 랭킹을 보는 사람에게 공개될 예정입니다.</p>
+    <p class="notice">게임 진행과 최고 비거리는 기기에 저장됩니다. 온라인 랭킹이 연결된 버전에서 참여를 선택하면 닉네임, 최고 비거리, 대포 레벨, 국기가 랭킹에 공개됩니다. 등록한 기록과 익명 랭킹 계정은 게임의 설정 메뉴에서 삭제할 수 있습니다.</p>
     <nav class="toc" aria-label="개인정보 처리방침 목차">
       <a href="#local-data">기기 내 저장</a>
       <a href="#ranking">온라인 랭킹</a>
+      <a href="#ranking-deletion">랭킹 기록 삭제</a>
       <a href="#advertising">광고와 결제</a>
       <a href="#contact">문의 및 권리 행사</a>
     </nav>
@@ -88,15 +89,23 @@
       </section>
 
       <section id="ranking">
-        <h2>온라인 랭킹에서 공개할 정보</h2>
-        <p>온라인 랭킹은 준비 중입니다. 현재 버전에서 게임이 생성하는 거리와 레벨은 기기에만 저장됩니다. 랭킹을 출시하면 이용자가 기록 등록을 선택했을 때 순위를 산정하고 표시하기 위해 다음 정보를 처리하고, 랭킹을 보는 사람에게 공개할 예정입니다.</p>
+        <h2>온라인 랭킹과 공개 항목</h2>
+        <p>온라인 랭킹이 연결된 버전에서 참여는 선택 사항입니다. ‘랭킹에 등록’을 누르면 아래 항목을 순위 산정과 표시에 사용하며, 순위와 함께 랭킹을 조회하는 사람에게 공개합니다. 참여 중에는 갱신된 최고 비거리와 대포 레벨이 서버와 동기화됩니다.</p>
         <dl class="data-list">
           <div><dt>닉네임</dt><dd>이용자가 랭킹에 표시할 이름을 입력합니다.</dd></div>
-          <div><dt>거리 기록</dt><dd>게임이 측정한 비거리를 미터(m)로 표시합니다.</dd></div>
-          <div><dt>레벨</dt><dd>게임 진행에 따라 산정한 레벨을 표시합니다.</dd></div>
-          <div><dt>국적</dt><dd>이용자가 랭킹에서 표시할 국적을 직접 선택합니다.</dd></div>
+          <div><dt>최고 비거리</dt><dd>게임이 측정한 최고 비거리를 미터(m)로 표시합니다.</dd></div>
+          <div><dt>대포 레벨</dt><dd>게임 진행에 따라 올라가는 대포 레벨을 표시합니다.</dd></div>
+          <div><dt>국적</dt><dd>랭킹에 표시할 국가 또는 지역을 국기로 보여줍니다.</dd></div>
         </dl>
-        <p>랭킹 공개 범위와 기록의 보유 기간, 수정·삭제 방법, 서버 운영 및 위탁 사항은 기록 등록을 시작하기 전에 이 페이지에 안내합니다.</p>
+        <p>첫 참여 시 기기의 운영체제에 설정된 국가·지역을 기본 국기로 표시합니다. 등록하기 전 국기를 선택할 수 있고, 기기의 지역을 확인할 수 없으면 직접 선택해야 합니다. 이후에는 <strong>온라인 랭킹</strong>에서 현재 국기를 눌러 새 국기를 고르고 <strong>프로필 저장</strong>을 누르세요. 선택한 국기와 닉네임이 랭킹에 반영됩니다.</p>
+        <p>온라인 랭킹의 인증과 데이터 저장은 Supabase Pte. Ltd.에 위탁합니다. Supabase 서버에는 인증용 익명 사용자 ID, 공개 랭킹 항목과 동률의 순서를 정하는 데 쓰이는 최고 비거리 등록 시각이 저장됩니다. 앱은 해당 계정의 랭킹을 갱신하고 삭제할 수 있도록 인증 토큰을 기기에 저장합니다. Supabase는 서비스 운영과 오류 대응을 위해 익명 사용자 ID, 요청 시각 등 접속·인증 로그를 기록할 수 있습니다. <a href="https://supabase.com/docs/guides/observability/logs">Supabase 로그 안내</a></p>
+      </section>
+
+      <section id="ranking-deletion">
+        <h2>랭킹 기록 보유 기간 및 삭제 방법</h2>
+        <p>공개 랭킹 기록과 익명 랭킹 계정은 이용자가 삭제할 때까지 보유합니다. 인터넷에 연결한 뒤 게임에서 <strong>발사장 → 설정 → 온라인 랭킹 기록 삭제 → 삭제</strong>를 선택하고 삭제 완료 메시지를 확인하세요.</p>
+        <p>삭제가 완료되면 운영 데이터베이스에서 해당 이용자의 공개 랭킹 기록과 Supabase 익명 랭킹 계정 및 연결된 세션이 삭제되고, 앱에서 해당 계정의 인증 정보가 지워집니다. 서비스 운영 로그나 백업에 남은 정보는 서비스의 보관 주기에 따라 파기됩니다. 기기에 저장된 최고 비거리, 게임 진행과 국기 설정은 유지됩니다. 다시 참여하려면 ‘랭킹에 등록’을 선택해야 합니다.</p>
+        <p>앱을 지우면 기기에 저장된 랭킹 인증 정보에 접근할 수 없게 될 수 있으므로, 서버 기록 삭제를 원하면 먼저 게임 설정에서 삭제해 주세요. 기기를 이용할 수 없거나 삭제에 문제가 있으면 <a href="#contact">고객지원</a>으로 문의해 주세요.</p>
       </section>
 
       <section id="advertising">
@@ -122,15 +131,23 @@
       </section>
 
       <section>
-        <h2>Information planned for public rankings</h2>
-        <p>Online rankings are in development. The current version keeps your distance and level on your device. After rankings launch, when you choose to submit a record, the game plans to use the following information to calculate and display rankings. Anyone viewing the rankings will be able to see these fields.</p>
+        <h2>Online rankings and public information</h2>
+        <p>Participation is optional in versions connected to online rankings. When you select <strong>Join ranking</strong>, we use the information below to calculate and display the rankings. Anyone viewing the leaderboard can see these fields and your rank. Your best distance and cannon level sync to the server as they improve while you participate.</p>
         <dl class="data-list">
           <div><dt>Nickname</dt><dd>The name you enter for the leaderboard.</dd></div>
-          <div><dt>Distance record</dt><dd>The distance measured by the game, displayed in meters (m).</dd></div>
-          <div><dt>Level</dt><dd>Your level calculated from game progress.</dd></div>
-          <div><dt>Nationality</dt><dd>The nationality you choose to display on the leaderboard.</dd></div>
+          <div><dt>Best distance</dt><dd>The best distance measured by the game, displayed in meters (m).</dd></div>
+          <div><dt>Cannon level</dt><dd>Your cannon level, which increases as you progress.</dd></div>
+          <div><dt>Nationality</dt><dd>The flag of the country or region displayed on the leaderboard.</dd></div>
         </dl>
-        <p>This page will explain who can see ranking records, how long the records are kept, how to correct or delete them, and how the service handles server data before submissions open.</p>
+        <p>When you first join, the game uses your operating system’s country or region setting as the default flag. You can choose a different flag before joining. If your device region is unavailable, choose a flag to join. To change it later, open <strong>Online ranking</strong>, select your current flag, choose a new one, then select <strong>Save profile</strong>. Saving your profile updates the flag and nickname shown on the leaderboard.</p>
+        <p>Supabase Pte. Ltd. provides authentication and data storage for the online rankings. Its server stores your anonymous user ID, the public ranking fields, and the time your best distance was submitted to order tied scores. The app stores authentication tokens on your device so you can update or delete your entry. Supabase may keep request and authentication logs, including anonymous user IDs and request times, for service operations and troubleshooting. <a href="https://supabase.com/docs/guides/observability/logs">Supabase logging documentation</a></p>
+      </section>
+
+      <section id="ranking-deletion-en">
+        <h2>Ranking retention and deletion</h2>
+        <p>We keep your public entry and anonymous ranking account until you delete them. With an internet connection, select <strong>Launch screen → Settings → Delete online ranking record → Delete</strong> and wait for confirmation.</p>
+        <p>When deletion completes, the public entry, Supabase anonymous ranking account and associated sessions are removed from the operational database, and the app clears that account’s authentication information from your device. Information in service logs or backups is removed according to the service’s retention schedule. Your local best distance, game progress and flag setting stay on your device. To participate again, select <strong>Join ranking</strong>.</p>
+        <p>Uninstalling the app may remove access to the ranking credentials stored on your device. To delete your server record, use the in-game setting first. If you cannot access your device or have trouble deleting your record, <a href="#contact-en">contact support</a>.</p>
       </section>
 
       <section>
@@ -140,7 +157,7 @@
         <p><a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a> · <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=en">AdMob data disclosure</a></p>
       </section>
 
-      <section>
+      <section id="contact-en">
         <h2>Customer support and privacy rights</h2>
         <p>If you contact support by email, we use your email address, message and any materials you attach to respond and resolve your inquiry. We keep support information for as long as needed to handle the inquiry and delete it afterward. Where the law requires longer retention, we delete the information after the required period.</p>
         <p>You or your legal representative can ask ZERAON GAME STUDIO support to access, correct, delete or restrict the processing of your personal information. We may request information to verify your identity or your representative’s authority.</p>
